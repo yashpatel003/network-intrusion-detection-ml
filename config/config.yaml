@@ -1,0 +1,34 @@
+# Database configuration details
+db:
+  uri_env_key: "MONGO_URI"  
+  database: "network_security"  
+  collection: "intrusion_records"  
+
+# File paths for storing datasets and intermediate artifacts
+file_paths:
+  raw_data: "artifacts/data_ingestion/raw_data.csv"  
+  feature_store: "artifacts/feature_store/clean_data.csv"  
+  train_data: "artifacts/train_test_split/train.csv" 
+  test_data: "artifacts/train_test_split/test.csv"  
+
+# Data validation configuration
+validation:
+  schema_file: "artifacts/data_validation/schema.yaml"  
+  report_file: "artifacts/data_validation/validation_report.json"  
+
+# Data transformation configuration
+transformation:
+  transformed_train_data: "artifacts/data_transformation/transformed_train.npy"  
+  transformed_test_data: "artifacts/data_transformation/transformed_test.npy"  
+  transformer_object: "artifacts/data_transformation/transformer.pkl"  
+
+# Model training parameters and output paths
+training:
+  test_size: 0.2  
+  random_state: 42  
+  model_output: "artifacts/model_training/model.pkl"  
+  metrics_output: "artifacts/model_training/metrics.json"  
+
+# Model evaluation output path
+evaluation:
+  evaluation_report: "artifacts/model_evaluation/evaluation_report.json"  
