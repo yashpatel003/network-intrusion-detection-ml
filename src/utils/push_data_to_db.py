@@ -133,3 +133,29 @@ class NetworkDataHandler:
         except Exception as e:
             logger.error("An error occurred during data ingestion.")
             raise CustomException(e, sys)
+
+
+
+if __name__ == "__main__":
+    try:
+        # CSV file path for processed network intrusion data
+        FILE_PATH: str = "../../data/processed/clean_network_data.csv"
+        
+        # Target database and collection names
+        DATABASE_NAME: str = "network_security"
+        COLLECTION_NAME: str = "intrusion_records"
+
+        # Create an instance of the data handler
+        handler = NetworkDataHandler()
+
+        # Convert the CSV file to a list of JSON-like records
+        records = handler.csv_to_json_records(FILE_PATH)
+
+        # Insert records into MongoDB in batches
+        inserted_count = handler.insert_records_to_db(records, DATABASE_NAME, COLLECTION_NAME)
+
+        # Log a final success message
+        logger.info(f"Successfully inserted {inserted_count} records into MongoDB.")
+
+    except Exception as e:
+        logger.error(f"An error occurred during data ingestion: {e}")

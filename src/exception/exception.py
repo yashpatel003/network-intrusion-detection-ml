@@ -27,6 +27,7 @@ def get_error_message_detail(error, error_detail: sys):
             f"at line: [{line_number}] "
             f"with error: [{str(error)}]"
         )
+        logger.error(error_message)
         return error_message
 
     except Exception as internal_error:
