@@ -10,7 +10,7 @@ from src.exception.exception import CustomException
 
 
 class DataIngestion:
-    def __init__(self, configuration: Configuration):
+    def __init__(self, configuration: Configuration) -> None:
         """
         Initialize DataIngestion class with a configuration instance.
         """

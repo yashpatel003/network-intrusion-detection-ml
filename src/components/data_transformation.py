@@ -13,7 +13,7 @@ from src.utils.utils import save_numpy_array_data, save_object
 
 class DataTransformation:
 
-    def __init__(self, configuration: Configuration):
+    def __init__(self, configuration: Configuration) -> None:
         """
         Constructor for initializing the DataTransformation object.
         """
@@ -126,28 +126,3 @@ class DataTransformation:
 
         except Exception as e:
             raise CustomException(e, sys)
-        
-# def main():
-#     try:
-#         # Initialize configuration
-#         config = Configuration("../../config/config.yaml")
-
-#         # Create DataTransformation instance
-#         data_transformation = DataTransformation(configuration=config)
-
-#         # Run data transformation process
-#         data_transformation.initiate_data_transformation()
-
-#         # # Log success and artifact paths
-#         # logger.info(f"Data Transformation Artifact:\n"
-#         #             f"Preprocessor object: {transformation_artifact.transformed_object_file_path}\n"
-#         #             f"Transformed train file: {transformation_artifact.transformed_train_file_path}\n"
-#         #             f"Transformed test file: {transformation_artifact.transformed_test_file_path}")
-
-#     except Exception as e:
-#         logger.error(f"Error in data transformation pipeline: {e}")
-#         raise CustomException(e, sys)
-
-# if __name__ == "__main__":
-#     main()
-
