@@ -13,21 +13,26 @@ file_paths:
 
 # Data validation configuration
 validation:
-  schema_file: "artifacts/data_validation/schema.yaml"  
-  report_file: "artifacts/data_validation/validation_report.json"  
+  schema_file: "config/schema.yaml"  
+  valid_train_file_path: "artifacts/data_validation/train_valid.csv"
+  valid_test_file_path: "artifacts/data_validation/test_valid.csv"
+  report_file: "artifacts/data_validation/validation_report.json" 
+  drift_threshold: 0.05 
 
 # Data transformation configuration
 transformation:
   transformed_train_data: "artifacts/data_transformation/transformed_train.npy"  
   transformed_test_data: "artifacts/data_transformation/transformed_test.npy"  
-  transformer_object: "artifacts/data_transformation/transformer.pkl"  
+  transformer_object: "artifacts/data_transformation/transformer.pkl"
+  target_object: "artifacts/data_transformation/target_encoder.pkl"
 
 # Model training parameters and output paths
 training:
   test_size: 0.2  
   random_state: 42  
   model_output: "artifacts/model_training/model.pkl"  
-  metrics_output: "artifacts/model_training/metrics.json"  
+  metrics_output: "artifacts/model_training/metrics.json" 
+  target_columns: "Label" 
 
 # Model evaluation output path
 evaluation:

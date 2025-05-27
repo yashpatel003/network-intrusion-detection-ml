@@ -1,0 +1,62 @@
+columns:
+  Destination Port: { dtype: int64 }
+  Flow Duration: { dtype: int64 }
+  Total Fwd Packets: { dtype: int64 }
+  Total Backward Packets: { dtype: int64 }
+  Total Length of Fwd Packets: { dtype: int64 }
+  Total Length of Bwd Packets: { dtype: int64 }
+  Fwd Packet Length Max: { dtype: int64 }
+  Fwd Packet Length Min: { dtype: int64 }
+  Fwd Packet Length Mean: { dtype: float64 }
+  Fwd Packet Length Std: { dtype: float64 }
+  Bwd Packet Length Max: { dtype: int64 }
+  Bwd Packet Length Min: { dtype: int64 }
+  Bwd Packet Length Mean: { dtype: float64 }
+  Bwd Packet Length Std: { dtype: float64 }
+  Flow Bytes/s: { dtype: float64 }
+  Flow Packets/s: { dtype: float64 }
+  Flow IAT Mean: { dtype: float64 }
+  Flow IAT Std: { dtype: float64 }
+  Flow IAT Max: { dtype: int64 }
+  Flow IAT Min: { dtype: int64 }
+  Fwd IAT Total: { dtype: int64 }
+  Fwd IAT Mean: { dtype: float64 }
+  Fwd IAT Std: { dtype: float64 }
+  Fwd IAT Max: { dtype: int64 }
+  Fwd IAT Min: { dtype: int64 }
+  Bwd IAT Total: { dtype: int64 }
+  Bwd IAT Mean: { dtype: float64 }
+  Bwd IAT Std: { dtype: float64 }
+  Bwd IAT Max: { dtype: int64 }
+  Bwd IAT Min: { dtype: int64 }
+  Fwd PSH Flags: { dtype: int64 }
+  Fwd Header Length: { dtype: int64 }
+  Bwd Header Length: { dtype: int64 }
+  Fwd Packets/s: { dtype: float64 }
+  Bwd Packets/s: { dtype: float64 }
+  Min Packet Length: { dtype: int64 }
+  Max Packet Length: { dtype: int64 }
+  Packet Length Mean: { dtype: float64 }
+  Packet Length Std: { dtype: float64 }
+  Packet Length Variance: { dtype: float64 }
+  FIN Flag Count: { dtype: int64 }
+  RST Flag Count: { dtype: int64 }
+  PSH Flag Count: { dtype: int64 }
+  ACK Flag Count: { dtype: int64 }
+  URG Flag Count: { dtype: int64 }
+  Down/Up Ratio: { dtype: int64 }
+  Average Packet Size: { dtype: float64 }
+  Avg Bwd Segment Size: { dtype: float64 }
+  Init_Win_bytes_forward: { dtype: int64 }
+  Init_Win_bytes_backward: { dtype: int64 }
+  act_data_pkt_fwd: { dtype: int64 }
+  min_seg_size_forward: { dtype: int64 }
+  Active Mean: { dtype: float64 }
+  Active Std: { dtype: float64 }
+  Active Max: { dtype: int64 }
+  Active Min: { dtype: int64 }
+  Idle Mean: { dtype: float64 }
+  Idle Std: { dtype: float64 }
+  Idle Max: { dtype: int64 }
+  Idle Min: { dtype: int64 }
+  Label: { dtype: object }
